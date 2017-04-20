@@ -1,0 +1,25 @@
+@model List<TryASP.NETCore.Models.Equipment>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Equipment</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <input name="EquipmentName"/>
+        <input type="submit" value="Add Equipment"/>
+    </div>
+</form>
+
+<h4>Equipment</h4>
+
+<div>
+    <ul>
+        @foreach(var item in Model){ 
+            <li>
+                @item.Name
+            </li>
+        }
+    </ul>
+</div>
